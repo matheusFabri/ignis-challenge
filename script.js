@@ -1,4 +1,5 @@
 import { Time } from "./classes/Time.js";
+import { Campeonato } from "./classes/Campeonato.js";
 
 const textInput = document.querySelector("textarea");
 const submitInput = document.querySelector("input");
@@ -15,4 +16,8 @@ submitInput.addEventListener("click", (event) => {
     let time = new Time(nameList[0], nameList[1]);
     teamList.push(time);
   });
+
+  const c1 = new Campeonato(teamList);
+  c1.setJogos();
+  c1.printJogos();
 });
