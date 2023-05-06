@@ -4,20 +4,23 @@ export class Campeonato {
   constructor(times) {
     this.times = times;
     this.rodada = 0;
-    //this.turno = true;
     this.jogos = [];
   }
 
-  setJogos() {
-    for (let i = 0; i < this.times.length; i++) {
-      //this.rodada = i + 1;
-      for (let j = i + 1; j < this.times.length; j++) {
-        let jogo = new Jogo(this.times[i], this.times[j]);
-        this.jogos.push(jogo.toArray());
-        //this.rodada++;
-      }
-    }
-  }
+  //   setJogos() {
+  //     for (let i = 0; i < this.times.length; i++) {
+  //       //this.rodada = i + 1;
+  //       for (let j = i + 1; j < this.times.length; j++) {
+  //         let jogo = new Jogo(this.times[i], this.times[j]);
+  //         this.jogos.push(jogo.toArray());
+  //         //this.rodada++;
+  //       }
+  //     }
+  //   }
+
+  setJogos() {}
+
+  //fazer math.randow de 0 a 3 e desconsiderar os resultados 2 antes de aplicar
 
   getJogos() {
     return this.jogos;
