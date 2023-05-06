@@ -28,7 +28,7 @@ export class Campeonato {
     //Turno
     div.innerHTML += "<h4>Turno:</h4>";
     this.jogos.forEach((jogo) => {
-      div.innerHTML += `${jogo[0].nome} vs ${jogo[1].nome}<br>`;
+      div.innerHTML += `${jogo[0].nome} vs ${jogo[1].nome} - ${jogo[0].cidade}<br>`;
     });
 
     //Returno
@@ -37,7 +37,7 @@ export class Campeonato {
     });
     div.innerHTML += "<h4>Returno:</h4>";
     jogosReturno.forEach((jogo) => {
-      div.innerHTML += `${jogo[0].nome} vs ${jogo[1].nome}<br>`;
+      div.innerHTML += `${jogo[0].nome} vs ${jogo[1].nome} - ${jogo[0].cidade}<br>`;
     });
     document.querySelector(".form").append(div);
   }
