@@ -19,6 +19,33 @@ export class Campeonato {
     }
   }
 
+  setPontuacao(){
+    this.jogos.forEach((jogo)=>{
+      let result;
+
+        result = Math.floor(Math.random()*4);
+        if(result == 2){
+          result+=1;
+        }
+
+      jogo[0].pontuacao += result;
+      if(result == 3){
+        jogo[1].pontuacao += 0;
+      } else if(result == 1){
+        jogo[1].pontuacao += 1;
+      } else {
+        jogo[1].pontuacao += 3;
+      }
+    });
+  }
+
+  printPontuacao(){
+    this.times.forEach((time)=>{
+      console.log(`${time.pontuacao} - ${time.nome}`);
+    })
+  }
+
+
   getJogos() {
     return this.jogos;
   }

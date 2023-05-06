@@ -20,4 +20,6 @@ submitInput.addEventListener("click", (event) => {
   const c1 = new Campeonato(teamList);
   c1.setJogos();
   c1.printJogos();
+  c1.setPontuacao();
+  c1.printPontuacao();
 });
